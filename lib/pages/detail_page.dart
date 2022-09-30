@@ -2,6 +2,7 @@ import 'package:big_app/misc/colors.dart';
 import 'package:big_app/widgets/app_buttons.dart';
 import 'package:big_app/widgets/app_large_text.dart';
 import 'package:big_app/widgets/app_text.dart';
+import 'package:big_app/widgets/responsive_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,7 @@ class DetailPage extends StatefulWidget {
 class _DetailPageState extends State<DetailPage> {
   int gottenStars = 4;
   int selectedIndex = -1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -177,14 +179,23 @@ class _DetailPageState extends State<DetailPage> {
                   ),
                 )),
             Positioned(
-              bottom: 0,
+              bottom: 20,
+              left: 20,
+              right: 20,
               child: Row(
                 children: [
                   AppButtons(
-                      size: size,
-                      color: color,
-                      backgroundColor: backgroundColor,
-                      borderColor: borderColor)
+                    size: 60,
+                    color: AppColors.textColor1,
+                    backgroundColor: Colors.white,
+                    borderColor: AppColors.textColor1,
+                    isIcon: true,
+                    icon: Icons.favorite_border,
+                  ),
+                  SizedBox(width: 20,),
+                  ResponsiveButton(
+                    isResponsive: true
+                  )
                 ],
               ),
             )
