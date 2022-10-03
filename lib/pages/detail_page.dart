@@ -186,16 +186,16 @@ class _DetailPageState extends State<DetailPage> {
                 children: [
                   AppButtons(
                     size: 60,
-                    color: AppColors.textColor1,
+                    color: AppColors.textColor2,
                     backgroundColor: Colors.white,
-                    borderColor: AppColors.textColor1,
+                    borderColor: AppColors.textColor2,
                     isIcon: true,
                     icon: Icons.favorite_border,
                   ),
-                  SizedBox(width: 20,),
-                  ResponsiveButton(
-                    isResponsive: true
-                  )
+                  SizedBox(
+                    width: 20,
+                  ),
+                  ResponsiveButton(isResponsive: true)
                 ],
               ),
             )
